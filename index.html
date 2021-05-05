@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Card Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!--===== CARD =====-->
+        <section class="card" id="card">
+            <div class="front">
+                <div class="brand-logo" id="brand-logo">
+                    <!-- <img src="img/logos/visa.png" alt="Visa - logo"> -->
+                </div>
+                <img src="img/chip-tarjeta.png" class="chip" alt="">
+                <div class="data">
+                    <div class="group" id="num">
+                        <p class="label">Número de tarjeta</p>
+                        <p class="num">#### #### #### ####</p>
+                    </div>
+                    <div class="flexbox">
+                        <div class="group" id="name">
+                            <p class="label">Nombre de tarjeta</p>
+                            <p class="name">John Doe</p>
+                        </div>
+
+                        <div class="group" id="expire">
+                            <p class="label">Expiración</p>
+                            <p class="expire"><span class="month">MM</span> / <span class="year">AA</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="magnetic-bar"></div>
+                <div class="data">
+                    <div class="group" id="sign">
+                        <p class="label">Firma</p>
+                        <div class="sign">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="group" id="ccv">
+                        <p class="label">CCV</p>
+                        <p class="ccv"></p>
+                    </div>
+                </div>
+                <p class="legend">Lorem ipsum dolor sit amet</p>
+                <a href="#" class="bank-link">www.yourbank.com.ar</a>
+            </div>
+        </section>
+
+        <!--===== OPEN FORM BUTTON =====-->
+        <div class="container-btn">
+            <button class="btn-open-form" id="btn-open-form">
+				<i class="fas fa-plus"></i>
+			</button>
+        </div>
+
+        <!--===== FORM =====-->
+        <form id="form-card" class="form-card">
+            <div class="group">
+                <label for="inputNum">Número tarjeta</label>
+                <input type="text" id="inputNum" maxlength="19" autocomplete="off">
+            </div>
+            <div class="group">
+                <label for="inputNum">Nombre</label>
+                <input type="text" id="inputName" maxlength="19" autocomplete="off">
+            </div>
+
+            <div class="flexbox">
+                <div class="group expire">
+                    <label for="selectMonth">Expiración</label>
+                    <div class="flexbox">
+                        <div class="group-select">
+                            <select name="month" id="selectMonth">
+								<option disabled selected>Mes</option>
+							</select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="group-select">
+                            <select name="year" id="selectYear">
+								<option disabled selected>Año</option>
+							</select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group ccv">
+                    <label for="inputCcv">CCV</label>
+                    <input type="text" id="inputCcv" maxlength="3">
+                </div>
+            </div>
+            <button type="submit" class="btn-send">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
